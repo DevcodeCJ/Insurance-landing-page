@@ -1,0 +1,723 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 16px;
+}
+
+body {
+   font-family: 'Karla', sans-serif;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   font-size: 0.75rem;
+   letter-spacing: 1px;
+   cursor: pointer;
+}
+
+h1, h2, h3 {
+   font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+   font-size: 3.4rem;
+   line-height: 1;
+}
+
+h3 {
+   margin-bottom: 10px;
+}
+
+hr {
+   width: 12%;
+   border-width: 0;
+   border-top-width: 1px;
+   border-color: #fff;
+}
+
+main {
+   margin-top: 59px;
+}
+
+p {
+   font-size: 1rem;
+   line-height: 2;
+}
+
+li {
+   list-style: none;
+}
+
+.btn {
+   padding: .6rem 1.35rem;
+   letter-spacing: 2px;
+   border: 1px solid;
+}
+
+/***** Header *****/
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 9%;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 20;
+   background-color: #fff;
+   box-shadow: 5px 0 7.5px #2C2640;
+   /* opacity: 0; */
+}
+
+header .btn {
+   color: #2C2640;
+   border-color: #2C2640;
+}
+
+header .btn:hover {
+   color: #fff;
+   background-color: #2C2640;
+}
+
+header .hamburger {
+   display: none;
+   width: 37.5px;
+   height: 37.5px;
+   border: 2px solid #2C2640;
+   padding: 0 5px;
+   cursor: pointer;
+}
+
+header .hamburger .line1,
+header .hamburger .line2,
+header .hamburger .line3 {
+   width: 100%;
+   height: 2px;
+   background-color: #2C2640;
+   margin: 7px 0;
+   transition: 0.4s;
+}
+
+.change .line1 {
+   -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+   transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change .line2 {
+   opacity: 0;
+}
+
+.change .line3 {
+   -webkit-transform: rotate(-45deg) translate(-7px, -6px);
+   transform: rotate(45deg) translate(-7px, -6px);
+}
+
+header .link {
+   color: rgb(131, 131, 131);
+}
+
+header .link:hover {
+   color: #2C2640;
+}
+
+.logo {
+   width: 90px;
+   height: 12px;
+   cursor: pointer;
+}
+
+nav {
+   width: 42.5%;
+   min-width: 330px;
+   max-width: 400px;
+}
+
+nav ul {
+   display: flex;
+   justify-content: space-between;
+}
+
+/***** Mobile Nav *****/
+
+.nav-mobile {
+   background-color: #2B282F;
+   background-image: url(images/bg-pattern-mobile-nav.svg);
+   background-repeat: no-repeat;
+   background-size: 100%;
+   background-position: bottom;
+   position: fixed;
+   top: 87.5px;
+   width: 100%;
+   height: 91vh;
+   padding: 40px 5%;
+   z-index: 15;
+   transition: 0.4s;
+   opacity: 0;
+}
+
+.nav-mobile a {
+   font-size: 1.25rem;
+   color: #fff;
+   letter-spacing: 2px;
+}
+
+.nav-mobile .btn {
+   width: 85%;
+   display: inline-block;
+   color: #fff;
+   position: relative;
+   padding-top: 17.5px;
+   padding-bottom: 17.5px;
+   z-index: 10;
+}
+
+.nav-mobile .btn:hover {
+   background-color: #fff;
+   color: #2B282F;
+   position: relative;
+   padding-top: 17.5px;
+   padding-bottom: 17.5px;
+   z-index: 10;
+}
+
+.nav-mobile ul {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 30vh;
+}
+
+.nav-mobile li {
+   width: 100%;
+   text-align: center;
+}
+
+.nav-mobile .link:hover {
+   color: #ccc;
+}
+
+/***** Introduction *****/
+
+.image {
+   background-image: url(images/image-intro-desktop.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   width: 40%;
+   height: 590px;
+   display: inline-block;
+   position: absolute;
+   top: 150px;
+   right: 9%;
+}
+
+.image-mobile {
+   background-image: url(images/image-intro-desktop.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   width: 100%;
+   height: 600px;
+   display: none;
+   transition: 0.4s;
+}
+
+.introduction {
+   background-color: #2C2640;
+   padding-top: 90px;
+   padding-bottom: 110px;
+}
+
+.introduction .btn {
+   margin-top: 30px;
+   display: inline-block;
+   color: #fff;
+   position: relative;
+   z-index: 10;
+}
+
+.introduction .btn:hover {
+   color: #2C2640;
+   background-color: #fff;
+}
+
+.introduction h1 {
+   font-size: 4rem;
+}
+
+.introduction hr {
+   margin-left: 9%;
+   width: 8rem;
+}
+
+.introduction p {
+   font-size: 1rem;
+   line-height: 1.5;
+}
+
+.intro-right-desktop {
+   width: 25rem;
+   position: absolute;
+   top: -2rem;
+   right: 0;
+   z-index: 9;
+}
+
+.intro-left-desktop {
+   width: 10rem;
+   position: absolute;
+   top: 450px;
+   left: 0;
+   z-index: 8;
+}
+
+.intro-right-mobile {
+   display: none;
+}
+
+.intro-container {
+   color: #fff;
+   margin: auto 9%;
+}
+
+.intro-text-wrapper {
+   width: 49%;
+   padding-top: 50px;
+}
+
+.intro-text-wrapper h1 {
+   padding-bottom: 30px;
+}
+
+/***** Difference *****/
+
+.difference {
+   padding: 200px 9% 0 9%;
+}
+
+.difference hr {
+   margin: 0;
+   width: 8rem;
+}
+
+.difference h1 {
+   margin: 45px auto 65px;
+}
+
+.card {
+   margin: auto 15px;
+}
+
+.card:first-child {
+   margin-left: 0;
+}
+
+.card:last-child {
+   margin-right: 0;
+}
+
+.card-wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+
+.card-wrapper p {
+   color: rgb(131, 131, 131);
+}
+
+.icon {
+   width: 3.5rem;
+   margin-bottom: 20px;
+}
+
+/***** How We Work *****/
+
+.how-we-work {
+   padding: 100px 9%;
+   background-color: #fff;
+}
+
+.how-we-work .btn {
+   color: #fff;
+}
+
+.how-we-work .btn:hover {
+   color: #2C2640;
+   background-color: #fff;
+}
+
+.desc-wrapper {
+   background-color: #2C2640;
+   padding: 60px;
+   color: #fff;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-image: url(images/bg-pattern-how-we-work-desktop.svg);
+   background-repeat: no-repeat;
+   background-position: top right;
+   background-size: 45%;
+}
+
+.desc-wrapper h2 {
+   font-size: 2rem;
+   display: inline-block;
+   width: 39%;
+}
+
+/***** Footer *****/
+
+footer {
+   background-color: #f1f1f1;
+   padding-left: 9%;
+   padding-right: 9%;
+   padding-bottom: 0.5rem;
+   background-image: url(images/bg-pattern-footer-desktop.svg);
+   background-repeat: no-repeat;
+   background-position: top left;
+   background-size: 35%;
+}
+
+footer hr {
+   border-color: #CCCCCC;
+   width: 100%;
+}
+
+footer .link:hover {
+   color: #2C2640;
+   text-decoration: underline;
+}
+
+.footer-icon {
+   fill: #86808C;
+   transform: scale(0.85);
+   cursor: pointer;
+}
+
+.footer-icon:hover {
+   fill: #2C2640;
+}
+
+.footer-link {
+   width: 25%;
+   line-height: 1.75;
+}
+
+.footer-link .link-heading {
+   color: rgb(131, 131, 131);
+}
+
+.logo-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 50px;
+   padding-bottom: 20px;
+}
+
+.icon-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 18%;
+   min-width: 130px;
+   max-width: 150px;
+}
+
+.link-wrapper {
+   margin-top: 35px;
+   margin-bottom: 50px;
+   display: flex;
+}
+
+/***** Attribution *****/
+
+.attribution { 
+   font-size: 13px; 
+   text-align: center; 
+   color: hsl(217, 19%, 35%);
+   opacity: 75%;
+   margin-bottom: 0;
+}
+    
+.attribution a:link, .attribution a:visited { 
+   color: hsl(217, 19%, 35%);
+   text-decoration: underline;
+}
+
+@media screen and (orientation: landscape) {
+
+   .nav-mobile {
+      top: 87.5px;
+      height: 700px;
+   }
+
+   .nav-mobile ul {
+      height: 220px;
+   }
+}
+
+@media screen and (min-width: 849px) {
+
+   .nav-mobile {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 849px) {
+
+   header {
+      padding: 25px 9%;
+   }
+
+   header .hamburger {
+      display: block;
+   }
+
+   nav {
+      display: none;
+   }
+   
+   .image-mobile {
+      display: block;
+      position: relative;
+      top: 28.5px;
+   }
+
+   .image, .introduction hr {
+      display: none;
+   }
+
+   .introduction {
+      text-align: center;
+      background-image: url(images/bg-pattern-intro-left-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 45%;
+   }
+
+   .introduction .btn {
+      transform: scale(1.5);
+      padding-left: 2rem;
+      padding-right: 2rem;
+   }
+
+   .introduction h1 {
+      font-size: 3.25rem;
+   }
+
+   .introduction p {
+      font-size: 1.35rem;
+      line-height: 2;
+      margin-bottom: 20px;
+   }
+
+   .intro-text-wrapper {
+      width: 100%;
+      padding: 0;
+      margin: 50px auto;
+   }
+
+   .intro-right-desktop, 
+   .intro-left-desktop {
+      display: none;
+   }
+
+   .intro-right-mobile {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 135%;
+   }
+
+   .difference {
+      padding-top: 160px;
+      text-align: center;
+   }
+   
+   .difference hr {
+      width: 40%;
+      margin: auto;
+   }
+
+   .card-wrapper {
+      flex-direction: column;
+   }
+
+   .card {
+      margin: 0;
+      margin-bottom: 50px;
+   }
+
+   .icon {
+      width: 5.5rem;
+      margin-bottom: 30px;
+   }
+
+   h3 {
+      font-size: 2rem;
+   }
+
+   p {
+      font-size: 1.25rem;
+   }
+
+   .desc-wrapper {
+      flex-direction: column;
+      background-image: url();
+      text-align: center;
+      padding-bottom: 90px;
+   }
+
+   .desc-wrapper h2 {
+      font-size: 3rem;
+      margin-bottom: 50px;
+      width: 100%;
+   }
+
+   .desc-wrapper {
+      background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: 10%;
+   }
+
+   .how-we-work .btn {
+      transform: scale(1.5);
+      padding-left: 2rem;
+      padding-right: 2rem;
+   }
+
+   .logo {
+      width: 130px;
+      height: 20px;
+   }
+
+   footer .logo {
+      margin-bottom: 40px;
+   }
+
+   .logo-container {
+      flex-direction: column;
+      padding-top: 100px;
+      padding-bottom: 20px;
+   }
+   
+   .icon-wrapper {
+      transform: scale(1.4);
+      margin-bottom: 30px;
+   }
+
+   .link-wrapper {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   footer {
+      background-image: url(images/bg-pattern-footer-mobile.svg);
+      background-size: 100%;
+   }
+
+   .footer-link {
+      text-align: center;
+      margin-bottom: 30px;
+      width: 100%;
+   }
+
+   .footer-link .link {
+      font-size: 1.2rem;
+   }
+}
+
+@media screen and (max-width: 1104px) {
+
+   .image {
+      top: 130px;
+   }
+   
+   .introduction {
+      padding-top: 70px;
+      padding-bottom: 70px;
+   }
+   
+   .intro-left-desktop {
+      width: 8rem;
+      top: 490px;
+   }
+
+   .difference {
+      padding-top: 150px;
+   }
+
+   .desc-wrapper {
+      background-size: 62%;
+   }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+   header {
+      padding: 20px 17%;
+   }
+   
+   .image {
+      width: 30%;
+      height: 580px;
+      right: 17%;
+   }
+
+   .introduction hr {
+      margin-left: 17%;
+      width: 10rem;
+   }
+   
+   .intro-container {
+      margin: auto 17%;
+   }
+
+   .intro-right-desktop {
+      width: 25rem;
+      right: 0;
+   }
+   
+   .intro-left-desktop {
+      width: 12rem;
+      top: 430px;
+   }
+
+   .intro-text-wrapper {
+      width: 49%;
+      padding-top: 50px;
+   }
+
+   .difference, 
+   .how-we-work {
+      padding-left: 17%;
+      padding-right: 17%;
+   }
+
+   .difference hr {
+      width: 10rem;
+   }
+   
+   .logo-container, 
+   .link-wrapper {
+      padding-left: 10%;
+      padding-right: 10%;
+   }
+
+   footer hr {
+      width: 80%;
+      margin: auto;
+   }
+}
